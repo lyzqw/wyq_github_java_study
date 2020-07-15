@@ -51,4 +51,11 @@
   @<文件名>                     从文件读取选项和文件名
 
     
+# Reference + ReferenceQueue
+
+当我们想检测一个对象是否被回收了，那么我们就可以采用 Reference + ReferenceQueue，大概需要几个步骤：
+
+创建一个引用队列 queue
+创建 Refrence 对象，并关联引用队列 queue
+在 reference 被回收的时候，refrence 会被添加到 queue 中
 
